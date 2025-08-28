@@ -21,17 +21,6 @@ Bullets → 5–7 bullet points
 
 🖼 Clean, responsive popup UI.
 
-📂 Project Structure
-ai-summariser-extension/
-│── manifest.json        # Chrome extension manifest (v3)
-│── popup.html           # Extension popup UI
-│── popup.js             # Popup logic & API integration
-│── content.js           # Extracts article text from web pages
-│── background.js        # Service worker (optional for handling events)
-│── options.html         # Settings page to save Gemini API key
-│── options.js           # Logic for storing/retrieving API key
-│── icon.png             # Extension icon
-
 ⚙️ Installation
 
 Clone or download this repository.
