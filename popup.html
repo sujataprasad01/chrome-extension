@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Summariser</title>
     <style>
-        body {
+ body {
   min-width: 250px;
+  max-width: 350px;  /* keep consistent width */
   height: 350px;
   padding: 15px;
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f9fafb;
   color: #333;
+  box-sizing: border-box;
 }
+
 
 h2 {
   font-size: 1.2rem;
@@ -46,7 +49,7 @@ button {
 }
 
 #summarize {
-  background: #12a34a;
+  background: #466cea;
   color: white;
 }
 
@@ -55,23 +58,38 @@ button {
 }
 
 #copy-btn {
-  background: #6b7280;
+  background: #29c05e;
   color: white;
+    width: 70px;  /* fixed width */
+  text-align: center;
 }
 
 #copy-btn:hover {
-  background: #4b5563;
+  background: #1a9432;
 }
-
+.loader{
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
 pre {
   background: #f3f4f6;
   padding: 10px;
   border-radius: 6px;
   font-size: 0.85rem;
-  white-space: pre-wrap;
+  white-space: pre-wrap;  /* wrap long text */
   word-wrap: break-word;
   border: 1px solid #e5e7eb;
+
+  max-width: 100%;   /* prevent overflow */
+  width: 100%;       /* keep consistent width */
+  box-sizing: border-box;
 }
+
 
     </style>
 </head>
@@ -80,7 +98,7 @@ pre {
 
     <div class="options">
         
-    <select>
+    <select id="summary-type">
         <option value="brief">Brief</option>
         <option value="detailed">Detailed</option>
         <option value="bullets">Bullets</option>
